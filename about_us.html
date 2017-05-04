@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ABC School - About Us</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script>
+
+	function run_first() {
+		if(sessionStorage.li_id) {
+			document.getElementById(sessionStorage.li_id.toString()).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_li_selected(li_id) {
+		/*
+		for(i = 0; i < 5; i++) {
+			document.getElementById(i.toString()).style.color = "blue";
+		}
+		
+		document.getElementById(li_id.toString()).style.color = "white";
+		*/
+		
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id;		
+	}
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1>ABC School</h1>
+        <nav>
+        	<ul>
+            	<li><a href="index.html" id="0" onClick="nav_li_selected(0)">Home</a></li>
+                <li><a href="#" id="1" onClick="nav_li_selected(1)">Courses</a></li>
+                <li><a href="#" id="2" onClick="nav_li_selected(2)">IT News</a></li>
+                <li><a href="#" id="3" onClick="nav_li_selected(3)">Career</a></li>
+                <li><a href="about_us.html" id="4" onClick="nav_li_selected(4)">About Us</a></li>
+                <li><a href="#" id="5" onClick="nav_li_selected(5)">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>About Us</h1>
+    <section id="col1">
+    	<h2>Col1</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <section id="col2">
+    	<h2>Col2</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <section id="col3">
+    	<h2>Col3</h2>
+        <p>
+        This is a test. This is a test. This is a test. 
+        This is a test. This is a test. This is a test. 
+        </p>
+    </section>
+    <footer><h3>Design By 007 - 2017</h3></footer>
+    <p id="p1"></p>
+    </div>
+</body>
+</html>
